@@ -8,8 +8,8 @@ The dataset combines Metacritic critic reviews and Twitter discourse during the 
 
 ## Model
 Pipeline:
-BERT  → [CLS] per review  → WeightedAggregator → review film vector
-BERTweet → [CLS] per tweet → WeightedAggregator → tweet film vector
+BERT  → [CLS] per review  → WeightedAggregator → review film vector <br>
+BERTweet → [CLS] per tweet → WeightedAggregator → tweet film vector <br>
 Concatenate → Classification Head → P(win)
 
 Weighted Aggregator: aggregates review embeddings from BERT and BERTweet into a single film vector
