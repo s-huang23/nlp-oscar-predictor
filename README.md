@@ -17,7 +17,7 @@ Metacritic collection is now set up as a standalone raw-data step:
 ## Quick Start
 
 ### Google Collab (Recommended)
-1. Open [oscar_predictor.ipynb](oscar_predictor.ipynb) in GitHub, then click **Open in Colab** (or go to `File → Open notebook → GitHub` in Colab and paste the repo URL).
+1. Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/s-huang23/nlp-oscar-predictor/blob/main/oscar_predictor.ipynb) or open [oscar_predictor.ipynb](oscar_predictor.ipynb) in GitHub, then click **Open in Colab** (or go to `File → Open notebook → GitHub` in Colab and paste the repo URL).
 2. In Colab, go to **Runtime → Run all**.
    - The notebook clones this repo automatically so `data/` is available — no Drive upload needed.
    - The IMDb dataset is fetched via `kagglehub` on first run (uses Colab's cache on subsequent runs).

@@ -1,2 +1,9 @@
 beautifulsoup4>=4.12
 requests>=2.31
+pandas>=2.0
+numpy>=1.24
+scikit-learn>=1.3
+torch>=2.0
+transformers>=4.35
+kagglehub>=0.1
+scipy>=1.11
