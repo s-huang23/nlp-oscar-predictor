@@ -70,7 +70,7 @@ python scripts/scrape_metacritic.py
 python scripts/analyze_metacritic_dates.py
 ```
 
-## Preprocess reviews for the 2012-2020 Oscar campaign windows
+## Preprocess reviews before each 2012-2020 Oscar ceremony
 
 ```bash
 python scripts/preprocess_reviews.py

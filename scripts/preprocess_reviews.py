@@ -2,7 +2,7 @@
 """Preprocess Oscar nominee review datasets.
 
 The core window is:
-    nomination_date <= review_date < ceremony_date
+    review_date < ceremony_date
 
 The ceremony date is excluded because the scraped data is date-only. A review
 on Oscar day could be published after the Best Picture winner is announced.
@@ -95,11 +95,10 @@ def filter_by_awards_window(df: pd.DataFrame, windows: pd.DataFrame, source: str
 
     in_window = (
         working["review_date_parsed"].notna()
-        & (working["review_date_parsed"] >= working["nomination_date"])
         & (working["review_date_parsed"] < working["ceremony_date"])
     )
     filtered = working[in_window].copy()
-    print_summary("After nomination-to-ceremony filter", filtered)
+    print_summary("After ceremony-date filter", filtered)
     return filtered
 
 
