@@ -1,10 +1,7 @@
 # nlp-oscar-predictor
 
 ## Overview
-A transformer-based model to estimate the probability that an Oscar-nominated film wins Best Picture by analyzing textual discourse surrounding each nominee. For each nominee within its annual pool, the model learns linguistic signals of prestige, sentiment, and narrative momentum and outputs a win probability ∈ [0, 1] via a sigmoid activation.
-
-## High-level Overview
-This repo documents the development and experimentation of a transformer-based model for predicting the Academy Award for Best Picture, and results are compared to 2 other NLP models for baseline analysis. All models operate on the same core premise: given a cohort of nominated films in a given year, can discourse captured in critic and audience reviews predict which film will win?
+This repo documents the development and experimentation of a transformer-based model for predicting the Academy Award for Best Picture, and results are compared to 2 other NLP models for baseline analysis. All models operate on the same core premise: given a cohort of nominated films in a given year, can discourse captured in critic and audience reviews predict which film will win? For each nominee within its annual pool, the model learns linguistic signals of prestige, sentiment, and narrative momentum and outputs a win probability.
 
 ---
 
@@ -78,6 +75,7 @@ The primary constraint throughout development is **dataset size** — 9 cohort-l
 
 A secondary constraint is **data quality** — title mismatches between sources mean several actual winners have missing or partial review data in the current preprocessing pipeline, artificially suppressing model performance on those years. Results reported here should be interpreted with this caveat in mind. Cleaned data and an extended year range (incorporating BAFTA/Golden Globe cohorts) are identified as the highest-leverage improvements for future work.
 
+---
 
 ## Quick Start
 
