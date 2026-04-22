@@ -1,5 +1,8 @@
 # nlp-oscar-predictor
 
+## Note
+For the final cleaned-up model, see `final_oscar_predictor.ipynb`. For model development and experimentation, see `model_development.ipynb`.
+
 ## Overview
 This repo documents the development and experimentation of a transformer-based model for predicting the Academy Award for Best Picture, and results are compared to 2 other NLP models for baseline analysis. All models operate on the same core premise: given a cohort of nominated films in a given year, can discourse captured in critic and audience reviews predict which film will win? For each nominee within its annual pool, the model learns linguistic signals of prestige, sentiment, and narrative momentum and outputs a win probability.
 
@@ -80,13 +83,13 @@ A secondary constraint is **data quality** — title mismatches between sources 
 ## Quick Start
 
 ### Google Collab (Recommended)
-1. Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/s-huang23/nlp-oscar-predictor/blob/main/oscar_predictor.ipynb) or open [oscar_predictor.ipynb](oscar_predictor.ipynb) in GitHub, then click **Open in Colab** (or go to `File → Open notebook → GitHub` in Colab and paste the repo URL).
+1. Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/s-huang23/nlp-oscar-predictor/blob/main/final_oscar_predictor.ipynb) or open [final_oscar_predictor.ipynb](final_oscar_predictor.ipynb) in GitHub, then click **Open in Colab** (or go to `File → Open notebook → GitHub` in Colab and paste the repo URL).
 2. In Colab, go to **Runtime → Run all**.
    - The notebook clones this repo automatically so `data/` is available — no Drive upload needed.
    - The IMDb dataset is fetched via `kagglehub` on first run (uses Colab's cache on subsequent runs).
 3. If you want to use a Kaggle API key for faster downloads, add it as a Colab secret named `KAGGLE_KEY` before running.
 
-**GPU recommended.** In Colab, go to **Runtime → Change runtime type → T4 GPU** before running the BERT cells.
+**GPU recommended.** In Colab, go to **Runtime → Change runtime type → A100 GPU (or T4)** before running the code.
 
 ### Run Locally
 1. **Clone the repo:**
